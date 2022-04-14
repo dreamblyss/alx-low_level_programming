@@ -2,12 +2,12 @@
 
 /**
 * main - causes an infinite loop
-* \\o/\n - Infinite loop avoided
 * Return: 0
 */
 
 int main(void)
 {
+
 int i;
 printf("Infinite loop incoming : (\n");
 i = 0;
