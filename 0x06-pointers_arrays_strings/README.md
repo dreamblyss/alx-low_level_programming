@@ -1,4 +1,4 @@
-# 0X05 C - More pointers, arrays and strings
+# 0X06 C - More pointers, arrays and strings
 
 ## Description
 
