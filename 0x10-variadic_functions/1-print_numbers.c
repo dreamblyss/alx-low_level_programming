@@ -11,27 +11,26 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 unsigned int counter;
-va_list vlist;
+va_list vlists;
 
-if (separator == NULL)
-{
-return;
-}
-
-va_start(vlist, n);
+va_start(vlists, n);
 
 for (counter = 0; counter < n; counter++)
 {
-printf("%d", va_arg(vlist, const unsigned int));
 
-if (counter != (n - 1))
+if (!separator)
 {
-printf("%s", separator);
+printf("%d", va_arg(vlists, int));
 }
-
+else if (separator && counter == 0)
+{
+printf("%d", va_arg(vlists, int));
 }
-
+else
+{
+printf("%s%d", separator, va_arg(vlists, int));
+}
+}
+va_end(vlists);
 printf("\n");
-
-va_end(vlist);
 }
